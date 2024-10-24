@@ -1,23 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  font-size: 48px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: LightGray;
+  --foreground: black;
+  --nav-bg: rgb(71 85 105);
+  --nav-color: white;
 }
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: DimGray;
+    --foreground: white;
+    --nav-bg: black;
+    --nav-color: white;
+  }
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  box-shadow: 5px 5px 10px black;
+  background: var(--nav-bg);
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--nav-color);
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+  background: var(--nav-color);
+  color: var(--bs-primary);
+}
+
+.container:focus {
+  outline:none;
 }
 
 @layer utilities {
